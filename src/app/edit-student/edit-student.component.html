@@ -1,0 +1,46 @@
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Add Student Form</h1>
+        </div>
+    </div>
+    <form [formGroup]="studentForm" (ngSubmit)="submitStudent()">
+        <div class="row">
+            <div class="col-lg-6 mt-2">
+                <label for="">Student Name</label>
+                <input [ngClass]="{
+                    'has-error':studentForm.controls.studentName.touched && studentForm.controls.studentName.invalid,
+                    'has-success' : studentForm.controls.studentName.touched && studentForm.controls.studentName.valid
+                }" type="text" formControlName="studentName" class="form-control">
+                <span style="color:red;"
+                *ngIf="studentForm.controls.studentName.touched && studentForm.controls.studentName.invalid">Please Enter Name</span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <label for="">Student Email</label>
+                <input [ngClass]="{
+                    'has-error':studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.invalid,
+                    'has-success' : studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.valid
+                }" type="email" formControlName="studentEmail" class="form-control">
+                <span style="color:red;"
+                 *ngIf="studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.invalid">Enter Valid Email</span>
+            </div>
+
+            <div class="col-lg-6 mt-2">
+                <label for="">Phone Number</label>
+                <input [ngClass]="{
+                    'has-error':studentForm.controls.phoneNumber.touched && studentForm.controls.phoneNumber.invalid,
+                    'has-success' : studentForm.controls.phoneNumber.touched && studentForm.controls.phoneNumber.valid
+                }" type="text" formControlName="phoneNumber" class="form-control">
+                <span style="color:red;"
+                 *ngIf="studentForm.controls.phoneNumber.touched && studentForm.controls.phoneNumber.invalid">Enter Valid Phone Number</span>
+            </div>
+        </div>
+
+        
+        <div class="row mt-3">
+            <div class="col-lg-12">
+                <input type="submit" class="btn btn-primary btn-sm " style="text-align: center;">
+            </div>
+        </div>
+    </form>
+</div>

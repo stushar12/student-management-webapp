@@ -1,0 +1,32 @@
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h1 class="m-0 font-weight-bold text-primary text-center">Students {{id}} Attendance</h1>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <!-- <th>Student ID</th>                                -->
+                                <th>Date</th>
+                                <th>Status</th>
+                           </tr>
+                        </thead>
+                       
+
+                        <tbody>  <!--*ngFor="let user of userList"-->
+                            <tr *ngFor="let attend of attendanceId">
+                                <!-- <td>{{attend.id}}</td> -->
+                                <td>{{attend.date}}</td>
+                                <td>{{attend.present}}</td>
+                                                             
+                            </tr>
+                            </tbody>
+
+                    </table>
+                    </div>
+
+
+        </div>
+        <button [routerLink]="['/dashboard']" class="btn btn-lg .text-dark   bg-warning mt-2" style="cursor: pointer;">Back</button>
