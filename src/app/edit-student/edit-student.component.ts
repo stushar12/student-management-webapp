@@ -19,7 +19,7 @@ export class EditStudentComponent implements OnInit {
       'studentName': new FormControl('', Validators.required),
       'studentEmail': new FormControl('', [Validators.required, Validators.email]),
       'phoneNumber': new FormControl('', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
-    })
+    }) 
    }
 
   ngOnInit(): void {

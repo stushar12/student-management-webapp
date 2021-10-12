@@ -22,6 +22,8 @@ export class AddStudentComponent implements OnInit
     })
   }
 
+
+
   ngOnInit(): void {
   }
 
@@ -41,6 +43,6 @@ export class AddStudentComponent implements OnInit
         alert("Something Went Wrong"+"\n"+"Please try again.")
       })
       
-    }
+    } 
   }
  }

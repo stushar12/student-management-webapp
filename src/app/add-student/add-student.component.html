@@ -13,16 +13,18 @@
                     'has-success' : studentForm.controls.studentName.touched && studentForm.controls.studentName.valid
                 }" type="text" formControlName="studentName" class="form-control">
                 <span style="color:red;"
+                
                 *ngIf="studentForm.controls.studentName.touched && studentForm.controls.studentName.invalid">Please Enter Name</span>
             </div>
+
             <div class="col-lg-6 mt-4">
                 <label for="">Student Email</label>
                 <input [ngClass]="{
                     'has-error':studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.invalid,
                     'has-success' : studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.valid
-                }" type="email" formControlName="studentEmail" class="form-control">
+                }" type="email" formControlName="studentEmail" class="form-control"  >
                 <span style="color:red;"
-                 *ngIf="studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.invalid">Enter Valid Email</span>
+                 *ngIf="studentForm.controls.studentEmail.touched && studentForm.controls.studentEmail.invalid && studentForm.controls">Enter Valid Email</span>
             </div>
 
             <div class="col-lg-6 mt-4">

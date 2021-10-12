@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { ChartsComponent } from './charts/charts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { MarkAttendanceComponent } from './mark-attendance/mark-attendance.component';
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'viewAttendance/:id',
     component:ViewAttendanceComponent
+  },
+  {
+    path:'charts',
+    component:ChartsComponent
   }
 ];
 

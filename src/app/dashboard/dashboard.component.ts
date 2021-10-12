@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
 
   studentList:Array<Student> = []
   studentAttendance:Array<Attendance>=[]
-  removal:Array<number>=[]
+  dates:Array<Date>=[]
 
   constructor(private studentService:StudentService) { }
 
@@ -31,6 +31,11 @@ export class DashboardComponent implements OnInit {
     {
       this.studentAttendance=data
       console.log(this.studentAttendance.length)
+      // for(let i=0;i<this.studentAttendance.length;i++)
+      // {
+      //   this.dates.push(this.studentAttendance[i].date)
+      // }
+      // console.log(this.dates);
       }
     )
     
@@ -51,6 +56,8 @@ export class DashboardComponent implements OnInit {
       this.changeData()
     })
 
+
+} 
+     
     
-}
 }

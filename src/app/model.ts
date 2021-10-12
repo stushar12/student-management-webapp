@@ -13,3 +13,9 @@ export interface Attendance{
     date:Date,
     present:string
 }
+
+export interface chartData
+{
+    name:string,
+    value:number
+}

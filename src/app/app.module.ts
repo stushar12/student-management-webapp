@@ -12,6 +12,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { MarkAttendanceComponent } from './mark-attendance/mark-attendance.component';
 import { ViewAttendanceComponent } from './view-attendance/view-attendance.component';
+import { ChartsComponent } from './charts/charts.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { ViewAttendanceComponent } from './view-attendance/view-attendance.compo
     DashboardComponent,
     EditStudentComponent,
     MarkAttendanceComponent,
-    ViewAttendanceComponent
+    ViewAttendanceComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

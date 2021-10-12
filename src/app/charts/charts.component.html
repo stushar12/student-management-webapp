@@ -1,0 +1,16 @@
+<div class="row mt-5" *ngIf="final.length>0">
+    <h6 class="text-black-300 mb-3 mt-3" style="text-align: center; padding-right: 50%;">Students present</h6>
+    <ngx-charts-bar-vertical
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="final"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel">
+</ngx-charts-bar-vertical>
+</div>
