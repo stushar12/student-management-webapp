@@ -31,26 +31,9 @@ export class DashboardComponent implements OnInit {
     {
       this.studentAttendance=data
       console.log(this.studentAttendance.length)
-      // for(let i=0;i<this.studentAttendance.length;i++)
-      // {
-      //   this.dates.push(this.studentAttendance[i].date)
-      // }
-      // console.log(this.dates);
       }
     )
     
-
-    // for(let i=0;i<this.studentAttendance.length;i++)
-    //   {
-    //     if(this.studentAttendance[i].studentId==id)
-    //     {
-    //       this.studentService.deleteAttendanceById(i).subscribe(()=>
-    //       {
-
-    //       })
-    //       i=0;
-    //     }
-    //   }
 
       this.studentService.deleteStudentById(id).subscribe((data) => {
       this.changeData()
